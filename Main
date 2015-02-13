@@ -1,0 +1,33 @@
+import java.util.Scanner;
+
+public class BMI
+{
+    public static void main( String[] args )
+    {
+        Scanner keyboard = new Scanner (System.in);
+    
+        Double feet, inches, pounds, meters, kilograms, BMI;
+        
+        System.out.println("WELCOME TO BMI CALCULATOR V1.1 ");
+        System.out.println("______________________________________________________________________");
+        System.out.println(" ");
+        
+        System.out.print("Your height (feet only): ");
+        feet = keyboard.nextDouble();
+        System.out.print("Your height(inches): ");
+        inches = keyboard.nextDouble();
+        System.out.print("Your weight in pounds: ");
+        pounds = keyboard.nextDouble();
+        
+        meters = ((feet * 12) + inches) * .0254;
+        kilograms = pounds / 2.2;
+        BMI = kilograms / (meters * meters);
+        
+        System.out.println(" ");
+        System.out.println("Your BMI is "+ BMI +" ");
+        
+    }
+}
+
+//Changelog:
+//V1.1 More accurate BMI calculations, streamlined opening "page"
